@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main (String [] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int mheight = sc.nextInt();
+        int mweight = sc.nextInt();
+        int kheight = sc.nextInt();
+        int kweight = sc.nextInt();
+
+        boolean result = (mheight > kheight) && (mweight > kweight);
+
+        System.out.printf("%b\n", result);
+    }
+}
