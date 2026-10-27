@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int oddCount = 0;  // 홀수 개수를 셀 변수
+        int evenCount = 0; // 짝수 개수를 셀 변수
+        
+        while (true) {
+            int num = sc.nextInt();
+            
+            // 0이 입력되면 반복문을 멈춥니다.
+            if (num == 0) {
+                break;
+            }
+            
+            // 짝수인지 홀수인지 판별합니다.
+            if (num % 2 == 0) {
+                evenCount++; // 짝수면 1 증가
+            } else {
+                oddCount++;  // 홀수면 1 증가
+            }
+        }
+        
+        // 결과 출력 (띄어쓰기 모양에 주의!)
+        System.out.println("odd : " + oddCount);
+        System.out.println("even : " + evenCount);
+    }
+}
