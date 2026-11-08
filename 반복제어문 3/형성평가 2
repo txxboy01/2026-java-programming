@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+        
+        int i = 1;
+        while (true) {
+            int multiple = n * i;
+            
+            // 100 이상이면 출력하지 않고 종료
+            if (multiple >= 100) {
+                break;
+            }
+            
+            System.out.print(multiple + " ");
+            
+            // 10의 배수가 출력되면 종료
+            if (multiple % 10 == 0) {
+                break;
+            }
+            
+            i++;
+        }
+    }
+}

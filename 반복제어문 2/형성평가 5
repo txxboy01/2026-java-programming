@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int evenCount = 0; // 짝수 개수
+        int oddCount = 0;  // 홀수 개수
+        
+        // 10개의 정수를 입력받기 위해 10번 반복
+        for (int i = 0; i < 10; i++) {
+            int num = sc.nextInt();
+            
+            // 짝수인지 홀수인지 판별
+            if (num % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+        
+        // 결과 출력
+        System.out.println("even : " + evenCount);
+        System.out.println("odd : " + oddCount);
+    }
+}

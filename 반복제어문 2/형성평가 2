@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        
+        int start, end;
+        
+        // 입력받은 두 수 중 작은 수를 start, 큰 수를 end로 지정합니다.
+        if (a <= b) {
+            start = a;
+            end = b;
+        } else {
+            start = b;
+            end = end = a; // 오타 방지를 위해 end = a 로 정확히 대입
+        }
+        
+        // 작은 수부터 큰 수까지 반복하며 출력
+        for (int i = start; i <= end; i++) {
+            System.out.print(i + " ");
+        }
+    }
+}

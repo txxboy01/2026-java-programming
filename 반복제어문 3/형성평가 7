@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+        
+        char alpha = 'A';
+        int num = 0;
+        
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                // n - i 개 만큼 알파벳 출력, 나머지는 숫자 출력
+                if (j < n - i) {
+                    System.out.print(alpha + " ");
+                    alpha++;
+                } else {
+                    System.out.print(num + " ");
+                    num++;
+                }
+            }
+            System.out.println();
+        }
+    }
+}

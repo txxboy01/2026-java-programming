@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int sum = 0;   // 합계
+        int count = 0; // 입력받은 숫자의 개수 (0 제외)
+        
+        // 최대 20번 반복
+        for (int i = 0; i < 20; i++) {
+            int num = sc.nextInt();
+            
+            // 0이 입력되면 반복문 탈출
+            if (num == 0) {
+                break;
+            }
+            
+            sum += num;
+            count++;
+        }
+        
+        // 0만 맨처음 입력되는 등의 예외 상황이 아니라면 평균 계산
+        int avg = 0;
+        if (count > 0) {
+            avg = sum / count;
+        }
+        
+        // 결과 출력 (합계와 평균을 공백으로 구분)
+        System.out.println(sum + " " + avg);
+    }
+}

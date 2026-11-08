@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        
+        int start, end;
+        
+        // 입력받은 두 수 중 작은 수를 start, 큰 수를 end로 지정
+        if (a <= b) {
+            start = a;
+            end = b;
+        } else {
+            start = b;
+            end = a;
+        }
+        
+        int sum = 0;   // 3 또는 5의 배수의 합
+        int count = 0; // 조건에 맞는 수의 개수
+        
+        // start부터 end까지 범위 탐색
+        for (int i = start; i <= end; i++) {
+            // 3의 배수이거나 5의 배수인 경우
+            if (i % 3 == 0 || i % 5 == 0) {
+                sum += i;
+                count++;
+            }
+        }
+        
+        // 평균 계산 (0으로 나누는 예외 상황이 없다고 가정할 때)
+        double avg = (double) sum / count;
+        
+        // 결과 출력
+        System.out.println("sum : " + sum);
+        System.out.printf("avg : %.1f\n", avg);
+    }
+}

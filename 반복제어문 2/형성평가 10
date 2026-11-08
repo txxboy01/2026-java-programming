@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int start = sc.nextInt();
+        int end = sc.nextInt();
+        
+        // 1부터 9까지 행 반복
+        for (int j = 1; j <= 9; j++) {
+            
+            // start가 end보다 크거나 같을 때 (내림차순, 예: 5 3 -> 5단, 4단, 3단)
+            if (start >= end) {
+                for (int i = start; i >= end; i--) {
+                    // %2d를 사용해 결과 값을 두 자리로 맞춤 (한 자리면 앞에 공백 추가)
+                    // 단과 단 사이는 공백 3칸 ("   ")
+                    System.out.printf("%d * %d = %2d", i, j, i * j);
+                    
+                    // 마지막 단이 아니라면 뒤에 공백 3칸 추가
+                    if (i > end) {
+                        System.out.print("   ");
+                    }
+                }
+            } else {
+                // 오름차순 (예: 3 5 -> 3단, 4단, 5단)
+                for (int i = start; i <= end; i++) {
+                    System.out.printf("%d * %d = %2d", i, j, i * j);
+                    
+                    // 마지막 단이 아니라면 뒤에 공백 3칸 추가
+                    if (i < end) {
+                        System.out.print("   ");
+                    }
+                }
+            }
+            // 한 줄 출력이 끝나면 줄바꿈
+            System.out.println();
+        }
+    }
+}

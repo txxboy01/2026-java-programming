@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+        
+        int num = 1; // 10 미만의 홀수는 1부터 시작
+        
+        // n x n 크기의 표를 만들기 위한 이중 반복문
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                
+                System.out.print(num + " ");
+                
+                // 다음 홀수로 2 증가
+                num += 2;
+                
+                // 9를 넘어가면(즉, 11이 되면) 다시 1로 되돌림
+                if (num > 9) {
+                    num = 1;
+                }
+            }
+            // 한 행의 출력이 끝나면 줄바꿈
+            System.out.println();
+        }
+    }
+}

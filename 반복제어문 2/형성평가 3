@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+        int sum = 0; // 5의 배수의 합을 저장할 변수
+        
+        // 1부터 n까지 반복
+        for (int i = 1; i <= n; i++) {
+            // 5의 배수인 경우에만 sum에 더함
+            if (i % 5 == 0) {
+                sum += i;
+            }
+        }
+        
+        // 최종 합계 출력
+        System.out.println(sum);
+    }
+}

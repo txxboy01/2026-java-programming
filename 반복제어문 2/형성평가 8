@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int row = sc.nextInt();
+        int col = sc.nextInt();
+        
+        // 바깥쪽 반복문: 행을 담당 (1부터 row까지)
+        for (int i = 1; i <= row; i++) {
+            // 안쪽 반복문: 열을 담당 (1부터 col까지)
+            for (int j = 1; j <= col; j++) {
+                System.out.print((i * j) + " ");
+            }
+            // 한 행의 출력이 끝나면 줄바꿈
+            System.out.println();
+        }
+    }
+}
